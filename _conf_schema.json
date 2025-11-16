@@ -1,0 +1,20 @@
+{
+  "enable_qq_to_mc_forward": {
+    "description": "启用QQ群消息转发到MC",
+    "type": "bool",
+    "hint": "开启后，绑定了MC服务器的QQ群中的所有消息都会自动转发到游戏内（无需唤醒词）。修改后使用 /mcreload 命令重新加载配置即可生效，无需重启",
+    "default": true
+  },
+  "qq_forward_message_color": {
+    "description": "QQ消息在MC中的颜色",
+    "type": "string",
+    "hint": "QQ消息转发到MC时的文本颜色（十六进制颜色代码，例如 #00BFFF 是天蓝色）。修改后使用 /mcreload 命令重新加载配置即可生效，无需重启",
+    "default": "#00BFFF"
+  },
+  "enable_join_quit_messages": {
+    "description": "启用玩家进入/退出消息转发到QQ",
+    "type": "bool",
+    "hint": "开启后，玩家进入/退出游戏的消息会转发到绑定的QQ群。修改后使用 /mcreload 命令重新加载配置即可生效，无需重启",
+    "default": true
+  }
+}
