@@ -69,12 +69,7 @@ class MessageBuilder:
     @staticmethod
     def create_broadcast_message(components: List[Dict[str, Any]]) -> Dict[str, Any]:
         """创建广播消息"""
-        message_components = []
-        for component in components:
-            message_components.append({
-                "type": "text",
-                "data": component
-            })
+        message_components = [MessageBuilder.clean_component(component) for component in components]
         
         return {
             "api": "broadcast",
@@ -91,10 +86,7 @@ class MessageBuilder:
             "data": {
                 "uuid": uuid,
                 "nickname": nickname,
-                "message": [{
-                    "type": "text",
-                    "data": component
-                }]
+                "message": [MessageBuilder.clean_component(component)]
             },
             "echo": "1"
         }
